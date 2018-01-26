@@ -9,3 +9,4 @@ RUN apk add --no-cache openssh-client
 RUN adduser -D -u ${uid} ${user}
 
 USER ${user}
+RUN mkdir -p /home/${user}/.ssh && chown ${user} /home/${user}/.ssh
